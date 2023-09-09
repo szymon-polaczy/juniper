@@ -15,5 +15,10 @@
             "name": "bartnovak",
             "email": "b.nowak@osomstudio.com"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
 }

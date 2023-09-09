@@ -20,7 +20,7 @@ if ( file_exists( $composer_autoload ) ) {
 	$timber = new Timber\Timber();
 }
 
-require_once 'inc/include.php';
+require_once __DIR__ . '/inc/include.php';
 
 function juniper_theme_enqueue() {
 	$refresh_cache_time = time();

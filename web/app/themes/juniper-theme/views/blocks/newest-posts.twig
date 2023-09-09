@@ -1,0 +1,29 @@
+{#
+	Title: Newest posts
+	Description: 
+	Category: formatting
+	Icon: admin-comments
+	Keywords: 
+	Mode: edit
+	SupportsMode: true
+	SupportsMultiple: true
+#}
+
+<section class="bg-emerald-100">
+    <div class="w-9/12 mx-auto" id="newest-posts">
+        {% for post in newest_posts %}
+            {% include 'partial/listing-post.twig' with { post } %}
+        {% endfor %}
+
+        <div id="replace-posts">
+            <button 
+                hx-get="/htmx_more_newest_posts?page=2"
+                hx-trigger="click"
+                hx-target="#replace-posts"
+                hx-swap="outerHTML"
+            >
+                Load more posts
+            </button>
+        </div>
+    </div>
+</section>

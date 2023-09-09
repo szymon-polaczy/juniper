@@ -1,4 +1,6 @@
 <?php
 
-$juniper_blocks = new \Juniper\Blocks\JuniperBlocks();
+use Juniper\Blocks\JuniperBlocks;
+
+$juniper_blocks = new JuniperBlocks;
 $juniper_blocks->include_blocks_functions();
